@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SOCCER ANALYZER - Home</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="/static/style.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/brands.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css'><link rel="stylesheet" href="/static/input.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="cd-header" style="background-color:black;">
+		<div class="header-wrapper">
+			<div class="logo-wrap">
+				<a href="#" class="hover-target"><span>SOCCER</span>ANALYZER</a>
+			</div>
+			<div class="nav-but-wrap">
+				<div class="menu-icon hover-target">
+					<span class="menu-icon__line menu-icon__line-left"></span>
+					<span class="menu-icon__line"></span>
+					<span class="menu-icon__line menu-icon__line-right"></span>
+				</div>					
+			</div>					
+		</div>				
+	</header>
+
+	<div class="nav">
+		<div class="nav__content">
+			<ul class="nav__list">
+				<li class="nav__list-item"><a href="/" class="hover-target">Home</a></li>
+				<li class="nav__list-item"><a href="/templates/mkdir/" class="hover-target">mkdir</a></li>
+				<li class="nav__list-item"><a href="/templates/ls/" class="hover-target">ls</a></li>
+				<li class="nav__list-item active-nav"><a href="/templates/cat/" class="hover-target">cat</a></li>
+				<li class="nav__list-item"><a href="/templates/remove/" class="hover-target">remove</a></li>
+				<li class="nav__list-item"><a href="/templates/upload/" class="hover-target">upload</a></li>
+				<li class="nav__list-item"><a href="/templates/partition/" class="hover-target">get partition location</a></li>
+				<li class="nav__list-item"><a href="/templates/read/" class="hover-target">read partition</a></li>
+                <li class="nav__list-item"><a href="/templates/search/" class="hover-target">search analytics</a></li>
+
+			</ul>
+		</div>
+	</div>		
+
+	<div class="" style="margin-top:85px;">	
+		<div class="df" style="overflow:auto;">
+			<table style="overflow:auto">
+                <tr style="position:sticky;">
+                    <th>ID</th>
+                    <th>player_name</th>
+                    <th>games</th>
+                    <th>time</th>
+                    <th>goals</th>
+                    <th>xG</th>
+                    <th>assists</th>
+                    <th>xA</th>
+                    <th>shots</th>
+                    <th>key_passes</th>
+                    <th>yellow_cards</th>
+                    <th>red_cards</th>
+                    <th>pos</th>
+                    <th>team</th>
+                    <th>npg</th>
+                    <th>npXG</th>
+                    <th>xGChain</th>
+                    <th>xGBuildup</th>
+                </tr>
+			{% for result in df %}
+				<tr>
+					{% for item in result %}
+				  <td>{{item}}</td>
+				  {% endfor %}
+				</tr>
+			{% endfor %}
+			</table>
+		</div>
+	</div>
+	
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+
+<!-- Link to page
+================================================== -->
+
+<a href="https://front.codes/" class="link-to-portfolio hover-target" target=”_blank”></a>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="/static/script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="/static/input.js"></script>
+</body>
+</html>
